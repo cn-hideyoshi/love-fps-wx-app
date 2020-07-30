@@ -8,16 +8,32 @@
 </template>
 
 <script>
+    import {mapState, mapGetters, mapActions, mapMutations} from 'vuex'
+
     export default {
         data() {
             return {
-                title: 'uni-app'
+                title: 'Hello'
             }
         },
-        onLoad() {
-
+        computed: {
+            ...mapGetters(['getLocale']),
+            ...mapState([
+                'demo1'
+            ])
         },
-        methods: {}
+        onLoad() {
+            this.fn('传递的内容')
+            this.demoactions('这是一个异步')
+        },
+        methods: {
+            ...mapMutations([
+                'fn'
+            ]),
+            ...mapActions([
+                'demoactions'
+            ])
+        }
     }
 </script>
 
