@@ -21,4 +21,8 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+#User setting
 ignore
+/yarn.lock
+/package-lock.json
