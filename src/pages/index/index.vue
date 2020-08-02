@@ -1,5 +1,6 @@
 <template>
     <view class="content">
+        <bar :nav="setNav"></bar>
         <image class="logo" src="/static/logo.png"></image>
         <view>
             <text class="title">{{title}}</text>
@@ -8,31 +9,22 @@
 </template>
 
 <script>
-    import {mapState, mapGetters, mapActions, mapMutations} from 'vuex'
+    import bar from '@/components/vue/bar.vue';
 
     export default {
+        components: {bar},
         data() {
             return {
-                title: 'Hello'
+                // 自定义导航栏对象
+                title: 'lv-fps'
+                , setNav: {
+                    'bg': '',  //背景色
+                    'color': 'red',  //字体颜色
+                    // 'isBack': true, //是否显示返回按钮，由于导航栏是共用的，把所有的东西封装好，
+                    // 然后有些页面不需要的东西通过条件控制进行显示与隐藏
+                    'navTitle': '标题栏'
+                }
             }
-        },
-        computed: {
-            ...mapGetters(['getLocale']),
-            ...mapState([
-                'demo1'
-            ])
-        },
-        onLoad() {
-            this.fn('传递的内容')
-            this.demoactions('这是一个异步')
-        },
-        methods: {
-            ...mapMutations([
-                'fn'
-            ]),
-            ...mapActions([
-                'demoactions'
-            ])
         }
     }
 </script>
