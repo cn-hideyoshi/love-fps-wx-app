@@ -45,7 +45,7 @@
     }
 </script>
 
-<style lang="less">
+<style>
     .header {
         display: flex;
         align-items: center;
@@ -59,15 +59,15 @@
     .header .header-title {
         position: absolute;
         left: 50%;
-        font-size: unit(38, upx);
+        font-size: 38px;
         transform: translateX(-50%);
     }
 
     .header-back {
         position: absolute;
-        left: unit(15, upx);
-        font-size: unit(30, upx);
-        padding: unit(10, upx);
+        left: 15px;
+        font-size: 30px;
+        padding: 10px;
         border-radius: 50%;
     }
 </style>

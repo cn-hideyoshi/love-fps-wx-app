@@ -37,7 +37,7 @@
     }
 </script>
 
-<style lang="less">
+<style>
     .header {
         display: flex;
         align-items: center;
