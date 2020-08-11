@@ -46,7 +46,6 @@
 </script>
 
 <style lang="less">
-
     .header {
         display: flex;
         align-items: center;
